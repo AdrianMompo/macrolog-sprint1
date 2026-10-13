@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Aplicación para registrar comidas y controlar calorías y proteínas"
+  >
+  <title>MacroLog</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/home.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">MacroLog</a>
+
+    <nav aria-label="Navegación principal">
+      <a href="/login.html">Iniciar sesión</a>
+      <a class="button button-small" href="/register.html">Crear cuenta</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="welcome">
+      <p class="eyebrow">Seguimiento nutricional diario</p>
+      <h1>Controla lo que comes sin complicarte</h1>
+      <p>
+        Registra tus comidas y consulta tus calorías y proteínas acumuladas
+        durante el día.
+      </p>
+    </section>
+
+    <section class="summary" aria-label="Resumen diario">
+      <article class="metric">
+        <span>Calorías consumidas</span>
+        <strong>0 kcal</strong>
+      </article>
+
+      <article class="metric">
+        <span>Proteínas consumidas</span>
+        <strong>0 g</strong>
+      </article>
+
+      <article class="metric">
+        <span>Comidas registradas</span>
+        <strong>0</strong>
+      </article>
+    </section>
+
+    <section class="server-status" aria-live="polite">
+      <span class="status-dot" aria-hidden="true"></span>
+      <div>
+        <span>Estado de la aplicación</span>
+        <strong id="api-status">Comprobando conexión...</strong>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
