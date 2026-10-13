@@ -1,9 +1,10 @@
 import request from "supertest";
 import { describe, expect, it } from "vitest";
-import app from "../src/app.js";
+import { createTestContext } from "./helpers/testContext.js";
 
 describe("GET /api/health", () => {
   it("responde con HTTP 200 y el estado de MacroLog", async () => {
+    const { app } = await createTestContext();
     const response = await request(app).get("/api/health");
 
     expect(response.status).toBe(200);
