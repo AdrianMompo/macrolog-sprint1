@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Panel personal de alimentación de MacroLog"
+  >
+  <title>Mi panel | MacroLog</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/dashboard.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/dashboard.html">MacroLog</a>
+
+    <nav aria-label="Navegación del usuario">
+      <span id="user-email" class="user-email"></span>
+      <a id="admin-link" class="hidden" href="/admin.html">
+        Administración
+      </a>
+      <button id="logout-button" class="link-button" type="button">
+        Cerrar sesión
+      </button>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">Resumen diario</p>
+        <h1>Mi alimentación</h1>
+        <p class="muted">
+          Consulta tus calorías, proteínas y comidas del día.
+        </p>
+      </div>
+    </section>
+
+    <section class="summary" aria-label="Resumen nutricional">
+      <article class="metric">
+        <span>Calorías consumidas</span>
+        <strong>0 kcal</strong>
+      </article>
+
+      <article class="metric">
+        <span>Proteínas consumidas</span>
+        <strong>0 g</strong>
+      </article>
+
+      <article class="metric">
+        <span>Comidas registradas</span>
+        <strong>0</strong>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Comidas de hoy</h2>
+          <p class="muted">
+            Aquí aparecerán las comidas que registres.
+          </p>
+        </div>
+      </div>
+
+      <div class="empty-state">
+        <strong>No hay comidas registradas</strong>
+        <span>Tu historial diario está vacío.</span>
+      </div>
+    </section>
+
+    <section class="danger-zone">
+      <div>
+        <h2>Eliminar mi cuenta</h2>
+        <p>
+          Tu cuenta quedará desactivada y no podrás volver a entrar.
+        </p>
+      </div>
+
+      <button id="delete-account-button" class="button-danger" type="button">
+        Eliminar cuenta
+      </button>
+    </section>
+
+    <p id="page-message" class="form-message" aria-live="polite"></p>
+  </main>
+</body>
+</html>

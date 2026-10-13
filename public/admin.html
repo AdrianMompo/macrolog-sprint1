@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Administración de usuarios de MacroLog"
+  >
+  <title>Administración | MacroLog</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/admin.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/admin.html">MacroLog</a>
+
+    <nav aria-label="Navegación del administrador">
+      <a href="/dashboard.html">Mi panel</a>
+      <span id="user-email" class="user-email"></span>
+      <button id="logout-button" class="link-button" type="button">
+        Cerrar sesión
+      </button>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">Administración</p>
+        <h1>Usuarios</h1>
+        <p class="muted">
+          Consulta el estado y gestiona las cuentas registradas.
+        </p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Correo electrónico</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>Comprobar</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="users-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p id="page-message" class="form-message" aria-live="polite"></p>
+  </main>
+</body>
+</html>
