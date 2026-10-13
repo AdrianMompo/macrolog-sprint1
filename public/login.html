@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Iniciar sesión en MacroLog"
+  >
+  <title>Iniciar sesión | MacroLog</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/login.js"></script>
+</head>
+<body class="auth-page">
+  <header class="topbar">
+    <a class="brand" href="/">MacroLog</a>
+    <nav aria-label="Navegación principal">
+      <a href="/register.html">Crear cuenta</a>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-card">
+      <p class="eyebrow">Acceso</p>
+      <h1>Inicia sesión</h1>
+      <p class="muted">
+        Accede a tu panel personal de alimentación.
+      </p>
+
+      <p
+        id="success-message"
+        class="form-message form-message-success"
+        aria-live="polite"
+      ></p>
+
+      <form id="login-form" class="auth-form">
+        <label for="email">Correo electrónico</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+        >
+
+        <label for="password">Contraseña</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+        >
+
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+
+        <button id="submit-button" class="button" type="submit">
+          Iniciar sesión
+        </button>
+      </form>
+
+      <p class="auth-link">
+        ¿Todavía no tienes cuenta?
+        <a href="/register.html">Regístrate</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>
