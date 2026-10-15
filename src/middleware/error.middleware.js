@@ -17,6 +17,14 @@ export function errorHandler(error, request, response, next) {
     ? error.message
     : "Se ha producido un error interno";
 
+  if (
+    request.method === "POST" &&
+    request.path === "/api/prueba/estado" &&
+    statusCode === 400
+  ) {
+    return response.status(400).json({ error: message });
+    }
+
   response.status(statusCode).json({
     error: {
       code,
