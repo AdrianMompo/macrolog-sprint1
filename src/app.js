@@ -5,6 +5,7 @@ import morgan from "morgan";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import healthRoutes from "./api/health.routes.js";
+import pruebaRoutes from "./api/prueba.routes.js";
 import { createAuthRouter } from "./api/auth.routes.js";
 import { createUsersRouter } from "./api/users.routes.js";
 import { errorHandler } from "./middleware/error.middleware.js";
@@ -55,6 +56,7 @@ export function createApp({
   app.use(session(sessionOptions));
 
   app.use("/api/health", healthRoutes);
+  app.use("/api/prueba", pruebaRoutes);
   app.use("/api/auth", createAuthRouter({ userService }));
   app.use("/api/users", createUsersRouter({ userService }));
   app.use(express.static(publicDirectory));
